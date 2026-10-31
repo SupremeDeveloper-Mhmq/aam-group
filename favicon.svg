@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+	<rect x="0.5" y="0.5" width="31" height="31" rx="7"
+	   fill="#08090F" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+	<text x="16" y="22" text-anchor="middle"
+	   font-family="Vazirmatn, system-ui, sans-serif"
+	   font-weight="600" font-size="16" fill="#E8A55C">A</text>
+</svg>

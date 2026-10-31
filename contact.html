@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تماس — AAM Group</title>
+<meta name="description" content="بگویید چه می‌خواهید. یک فرم کوتاه. ظرف یک روز کاری پاسخ می‌دهیم — معمولاً زودتر.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<a class="skip-link" href="#main">پرش به محتوا</a>
+
+<header class="site-header" id="site-header">
+<div class="header-inner container">
+<a href="index.html" class="wordmark">AAM Group<span class="dot" aria-hidden="true"></span></a>
+<button class="menu-toggle" aria-label="باز کردن منو" aria-expanded="false" aria-controls="site-nav">
+<span class="bar"></span><span class="bar"></span><span class="bar"></span>
+</button>
+<nav class="site-nav" id="site-nav" aria-label="ناوبری اصلی">
+<a href="work/index.html">نمونه‌کارها</a>
+<a href="services/index.html">خدمات</a>
+<a href="process.html">فرایند</a>
+<a href="about.html">درباره</a>
+<a href="contact.html" class="btn-primary">شروع پروژه</a>
+</nav>
+</div>
+</header>
+
+<main id="main">
+<section class="hero container">
+<h1 class="hero-title">بگویید چه می‌خواهید.</h1>
+<p class="hero-text">یک فرم کوتاه. ظرف یک روز کاری پاسخ می‌دهیم — معمولاً زودتر.</p>
+</section>
+
+<section class="section container">
+<div class="glass glass--static contact-panel">
+<form id="contact-form" novalidate>
+<!-- To hook up a real endpoint, set action="https://formspree.io/f/YOUR_ID" method="POST" and update js/contact-form.js to fetch the form data instead of showing the demo message. -->
+<div class="form-field">
+<label for="name">نام</label>
+<input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error" aria-invalid="false">
+<span class="error-message" id="name-error" aria-live="polite"></span>
+</div>
+
+<div class="form-field">
+<label for="email">ایمیل</label>
+<input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error" aria-invalid="false" dir="ltr" style="text-align: left;">
+<span class="error-message" id="email-error" aria-live="polite"></span>
+</div>
+
+<div class="form-field">
+<label for="company">شرکت</label>
+<input id="company" name="company" type="text" autocomplete="organization">
+</div>
+
+<div class="form-field">
+<label for="need">چه می‌خواهید؟</label>
+<select id="need" name="need" required aria-describedby="need-error" aria-invalid="false">
+<option value="" disabled selected>یکی را انتخاب کنید</option>
+<option value="brand-sprint">Brand Sprint</option>
+<option value="site-launch">Site Launch</option>
+<option value="not-sure">مطمئن نیستم</option>
+<option value="other">چیز دیگری</option>
+</select>
+<span class="error-message" id="need-error" aria-live="polite"></span>
+</div>
+
+<div class="form-field">
+<label for="message">چیز دیگری</label>
+<textarea id="message" name="message" rows="4"></textarea>
+</div>
+
+<div>
+<button type="submit" class="btn-primary">ارسال درخواست</button>
+</div>
+
+<p class="form-status" hidden></p>
+
+<p class="form-help">این اطلاعات را فقط برای پاسخ به شما استفاده می‌کنیم. چیزی فروخته یا به اشتراک گذاشته نمی‌شود. <a href="privacy.html">سیاست حریم خصوصی</a></p>
+</form>
+</div>
+</section>
+
+<section class="section container">
+<h2 class="section-title">همچنین</h2>
+<div class="cards-grid cards-grid--3">
+<div class="glass card">
+<p style="font-size: var(--text-base);"><strong>ترجیح می‌دهید ایمیل بزنید؟</strong></p>
+<p><a href="mailto:hello@aamgroup.com">hello@aamgroup.com</a></p>
+</div>
+<div class="glass card">
+<p style="font-size: var(--text-base);"><strong>می‌خواهید اول صحبت کنیم؟</strong></p>
+<p><a href="#">رزرو تماس آشنایی ۳۰ دقیقه‌ای</a></p>
+</div>
+<div class="glass card">
+<p style="font-size: var(--text-base);"><strong>زمان پاسخ</strong></p>
+<p>یک روز کاری، دوشنبه تا جمعه.</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="footer-inner container">
+<div class="footer-col">
+<p class="footer-brand">AAM Group — برند و حضور آنلاین، با شتاب.</p>
+<p class="footer-desc">استودیویی کوچک برای شرکت‌های حرفه‌ای؛ برند و وب‌سایت، تحویل در چند روز.</p>
+</div>
+<nav class="footer-col footer-links" aria-label="ناوبری پانوشت">
+<a href="work/index.html">نمونه‌کارها</a>
+<a href="services/index.html">خدمات</a>
+<a href="process.html">فرایند</a>
+<a href="about.html">درباره</a>
+<a href="contact.html">تماس</a>
+</nav>
+<div class="footer-col footer-meta">
+<p><a href="mailto:hello@aamgroup.com">hello@aamgroup.com</a> · پاسخ ظرف یک روز کاری</p>
+<p>© ۲۰۲۶ AAM Group</p>
+<p><a href="privacy.html">سیاست حریم خصوصی</a></p>
+</div>
+</div>
+</footer>
+
+<script src="js/nav.js" defer></script>
+<script src="js/contact-form.js" defer></script>
+</body>
+</html>

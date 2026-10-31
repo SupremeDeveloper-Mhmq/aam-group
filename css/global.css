@@ -1,0 +1,145 @@
+/* global.css — variables, ambient layers, base typography */
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600&display=swap");
+
+:root {
+	--bg-base: #08090F;
+	--bg-elevated: #0E0F16;
+	--glass-tint: rgba(255, 255, 255, 0.055);
+	--glass-tint-strong: rgba(255, 255, 255, 0.09);
+	--glass-border: rgba(255, 255, 255, 0.10);
+	--glass-border-bright: rgba(255, 255, 255, 0.22);
+	--text-primary: #F5F3EE;
+	--text-secondary: #A8A8B3;
+	--text-tertiary: #6B6B7A;
+	--accent-primary: #E8A55C;
+	--accent-primary-hover: #F0B876;
+	--accent-secondary: #7C8DFF;
+	--accent-warm-glow: rgba(217, 119, 6, 0.18);
+	--accent-cool-glow: rgba(79, 70, 229, 0.14);
+	--success: #6EE7A8;
+	--error: #F87171;
+	--shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.35);
+	--shadow-glass-lift: 0 16px 48px rgba(0, 0, 0, 0.45);
+	--radius-sm: 12px;
+	--radius-md: 20px;
+	--radius-lg: 28px;
+	
+	--text-xs: 13px;
+	--text-sm: 14px;
+	--text-base: 16px;
+	--text-lg: 18px;
+	--text-xl: 24px;
+	--text-2xl: 32px;
+	--text-3xl: 44px;
+	--text-hero: clamp(34px, 5.5vw, 60px);
+	
+	--s-1: 4px;
+	--s-2: 8px;
+	--s-3: 12px;
+	--s-4: 16px;
+	--s-5: 24px;
+	--s-6: 32px;
+	--s-7: 48px;
+	--s-8: 64px;
+	--s-9: 96px;
+}
+
+html { scroll-behavior: smooth; }
+html, body {
+	background-color: var(--bg-base);
+	color: var(--text-primary);
+	font-family: 'Vazirmatn', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+body {
+	font-size: var(--text-base);
+	line-height: 1.75;
+	min-height: 100vh;
+	overflow-x: hidden;
+	position: relative;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	z-index: -2;
+	background:
+	radial-gradient(ellipse 60% 50% at 15% 0%, var(--accent-warm-glow) 0%, transparent 60%),
+	radial-gradient(ellipse 55% 50% at 85% 100%, var(--accent-cool-glow) 0%, transparent 60%);
+}
+
+body::after {
+	content: "";
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	z-index: -1;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+	opacity: 0.03;
+	mix-blend-mode: overlay;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	line-height: 1.25;
+	color: var(--text-primary);
+}
+h1 { font-size: var(--text-hero); line-height: 1.2; }
+h2 { font-size: var(--text-2xl); line-height: 1.35; }
+h3 { font-size: var(--text-xl); line-height: 1.4; }
+h4 { font-size: var(--text-lg); }
+p { color: var(--text-primary); }
+
+a { color: var(--accent-secondary); transition: color 150ms; }
+a:hover { color: var(--accent-primary-hover); }
+
+ul, ol { color: var(--text-secondary); }
+li { color: inherit; }
+
+strong, b { font-weight: 600; color: var(--text-primary); }
+em, i { font-style: normal; color: var(--text-secondary); }
+
+.container {
+	width: 100%;
+	max-width: 1120px;
+	margin-inline: auto;
+	padding-inline: 24px;
+}
+
+#main { scroll-margin-top: 96px; outline: none; }
+
+.visually-hidden {
+	position: absolute !important;
+	width: 1px; height: 1px;
+	padding: 0; margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+:focus-visible {
+	outline: 2px solid var(--accent-primary);
+	outline-offset: 3px;
+	border-radius: 4px;
+}
+
+.skip-link {
+	position: fixed;
+	top: 8px;
+	inset-inline-start: 8px;
+	transform: translateY(-200%);
+	background: var(--accent-primary);
+	color: #08090F;
+	padding: 10px 16px;
+	border-radius: var(--radius-sm);
+	font-weight: 600;
+	font-size: var(--text-sm);
+	z-index: 1000;
+	transition: transform 180ms;
+}
+.skip-link:focus { transform: translateY(0); }
+.skip-link:hover { color: #08090F; }
+
+::selection { background: var(--accent-primary); color: #08090F; }
